@@ -13,10 +13,10 @@
 // any는 계속해서 전파된다.
 // 타입 안정성을 잃는다.
 
-let looselyTyped: any = {};
+// let looselyTyped: any = {};
 
-let d = looselyTyped.a.b.c.d;
-console.log(d);
+// let d = looselyTyped.a.b.c.d;
+// console.log(d);
 
 // function leakingAny(obj: any) {
 //   const a:number = obj.num; // any // number

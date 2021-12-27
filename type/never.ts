@@ -32,3 +32,7 @@ if (typeof t !== "string") {
 }
 
 type Indexable<T> = T extends string ? T & { [index: string]: any } : never;
+// 조건부 타입
+
+
+type ObjectIndex = Indexable<{}>
