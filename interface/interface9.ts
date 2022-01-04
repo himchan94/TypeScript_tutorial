@@ -33,3 +33,37 @@ interface IArtistsResponse extends ArtistsData, ErrorHandling {}
 
 let art: ArtistsResponseType;
 let iar: IArtistsResponse;
+
+// union types
+interface Bird {
+  fly(): void;
+  layEggs(): void;
+}
+
+interface Fish {
+  swim(): void;
+  layEggs(): void;
+}
+
+type PetType = Bird | Fish;
+
+interface IPet extends PetType {} // error
+
+class Pet implements PetType {} // error
+
+// Declaration Mergin - interface
+
+// type alias에서는 불가능
+
+interface MergingInterface {
+  a: string;
+}
+
+interface MergingInterface {
+  b: string;
+}
+
+let mi: MergingInterface;
+
+// type alias는 타입을 부르는 이름
+// 인터페이스는 어떤 새로운 타입을 만드는 것
